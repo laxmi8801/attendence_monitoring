@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:powderblue;
+        }
+        button {   
+            background-color: #4CAF50;    
+            color: white; 
+        }
+    </style>
+    {% block content %}
+    <body>
+        <table>
+            <tr>
+            <th>Employee Name</th>
+            <th>clockin</th>
+            <th>clockout</th>
+        </tr>
+        {% for emp in attendence %}
+        <tr>
+            <td>{{user.get_username}}</td>
+            <td>{{emp.clockin}}</td>
+            <td>{{emp.clockout}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    
+    </body>
+    {% endblock %}
+
+</html>

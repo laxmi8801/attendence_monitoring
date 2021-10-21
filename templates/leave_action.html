@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:powderblue;
+        }
+        button {   
+            background-color: #4CAF50;    
+            color: white; 
+        }
+        table, th, td {
+  border: 1px solid black;
+}
+    </style>
+    {% block content %}
+    <body>
+        <table>
+            <tr>
+            <th>Employee Name</th>
+            <th>startdate</th>
+            <th>enddate</th>
+        </tr>
+        {% for leave in all_leaves %}
+        <tr>
+            <td>{{leave.name}}</td>
+            <td>{{leave.startdate}}</td>
+            <td>{{leave.enddate}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    
+    </body>
+    {% endblock %}
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:powderblue;
+        }
+        button {   
+            background-color: #4CAF50;    
+            color: white; 
+        }
+    </style>
+    {% block content %}
+    <body>
+        <form action="leave" method="POST">
+            {%csrf_token %}
+            <label>Name</label>
+            <input type="text" placeholder="name" name="name" required>
+            <label>Start Date</label>
+            <input type="date" placeholder="startdate" name="startdate" required> <br>
+            <label>End Date</label>
+            <input type="date" placeholder="enddate" name="enddate" required><br>
+            <input type="submit">
+        </form>
+        
+    </body>
+    {% endblock %}
+</html>

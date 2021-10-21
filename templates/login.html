@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+    <title>Login form</title>
+    <style>
+        body{
+            background-color:powderblue;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;   
+            margin: 8px 0;  
+            padding: 12px 20px;   
+            display: inline-block;   
+            border: 2px solid green;   
+            box-sizing: border-box;   
+        }
+        button {   
+            background-color: #4CAF50;    
+            color: white; 
+        }
+        .container {   
+            padding: 25px;  
+            display:block; 
+        }
+    </style>
+    <body>
+        <form action="login" method="POST">
+            {%csrf_token %}
+            <div class="container">
+                <label>username:</label>
+                <input type="text" placeholder="username" name="username" ><br>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" name="password" >
+                <input type="submit">
+               
+                  
+            </form>
+            </div>
+
+
+            <div>
+                {% for message in messages %}
+                <h3> {{message}}  </h3>
+                {% endfor %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:powderblue;
+        }
+        button {   
+            background-color: #4CAF50;    
+            color: white; 
+        }
+        table, th, td {
+            border: 1px solid black;
+          }
+    </style>
+    <body>
+        <h1>Welcome {{user.get_username}} !!!</h1>
+        <table>
+            <th>Name</th>
+            <th>Clock in </th>
+            <th>Clock out</th>
+            <tr>
+            <td>{{user.get_username}}</td>
+            <td>{{timesheet.clockin}}</td>
+            <td>{{timesheet.clockout}}</td>
+        </tr>
+        </table>
+        <a href="clockout">clocklout</a>
+        <p>attendence
+        </p>
+
+        <p><a href="leave"><img src="media/add_employee.jpg"style="width=150px;height=70px;"><br>Apply for leave</a></p>
+    </body>
+</html>
